@@ -1023,6 +1023,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _Shared_errorHandle__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Shared/errorHandle */ "./src/app/Shared/errorHandle.ts");
+/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
+
 
 
 
@@ -1034,9 +1036,10 @@ var RentedHousesService = /** @class */ (function (_super) {
         var _this = _super.call(this) || this;
         _this.http = http;
         _this.apiKey = 'AIzaSyC3u1VAIs0S5Ij-HmcxrTEMIx19X8UZH30';
-        _this.pyScraping = "http://127.0.0.1:5000/";
+        _this.pyScraping = src_environments_environment__WEBPACK_IMPORTED_MODULE_5__["environment"].url;
         return _this;
     }
+    ;
     RentedHousesService.prototype.getUrl = function (api) {
         return this.pyScraping + api;
     };
@@ -1130,7 +1133,8 @@ __webpack_require__.r(__webpack_exports__);
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 var environment = {
-    production: false
+    production: false,
+    url: 'http://127.0.0.1:5000/',
 };
 /*
  * For easier debugging in development mode, you can import the following file
